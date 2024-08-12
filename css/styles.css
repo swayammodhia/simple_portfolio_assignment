@@ -1,0 +1,393 @@
+/*
+Name - Swayam Modhia
+ID - C0934904
+Assignment 4 - CSS Code
+*/
+
+/* Basic Reset to ensure consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: font, background color, and text color */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header container styling: background, padding, flex layout, and shadow */
+.header-container {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo styling and hover effect */
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Main heading styling */
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Increased font size */
+    margin-left: 2rem;
+}
+
+/* Navigation styling */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Navigation list item styling */
+.nav-links li {
+    margin: 0;
+}
+
+/* Hide navigation parent (for mobile view) */
+.hide_parent_nav {
+    display: none !important;
+}
+
+/* Navigation links anchor styling and hover effect */
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger menu styling (for mobile view) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Hamburger menu span styling */
+.hamburger span {
+    height: 4px;
+    width: 25px;
+    background: #fff;
+    margin: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+    background: #ffcc00;
+}
+
+/* Navigation links styling (for mobile view) */
+.nav-links {
+    display: flex;
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #764ba2;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust if needed */
+    right: 0;
+    background: #764ba2;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Repeated navigation list item styling for mobile view */
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 0.75rem;
+    color: #fff;
+    font-size: 1.2rem; /* Increased font size */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: #ffcc00;
+    color: #333;
+}
+
+/* Section padding and margin */
+section {
+    padding: 3rem 1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Home container styling */
+.home-container {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Home container heading styling */
+.home-container h2 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 1rem;
+}
+
+/* Profile picture styling */
+.profile-picture {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+/* About, projects, and contact containers styling */
+.about-container, .projects-container, .contact-container {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* About, projects, and contact headings styling */
+.about-container h2, .projects-container h2, .contact-container h2 {
+    font-size: 2.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Projects container spacing */
+.projects-container {
+    margin-top: 3rem; /* Added margin-top for spacing from the previous section */
+    margin-bottom: 3rem; /* Added margin-bottom for spacing from the next section */
+}
+
+/* Projects container heading styling */
+.projects-container h2 {
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Individual project styling and hover effect */
+.project {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual project heading styling */
+.project h3 {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 0.5rem;
+}
+
+/* Contact container styling */
+.contact-container {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Contact container heading styling */
+.contact-container h2 {
+    font-size: 2.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Contact form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Form group label styling */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Form group input and textarea styling */
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Form group input and textarea focus styling */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Submit button styling and hover/active effects */
+.submit-button {
+    background: #667eea;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Increased font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background: #556cd6;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background: #445bbf;
+}
+
+/* Footer container styling */
+.footer-container {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Footer container paragraph styling */
+.footer-container p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #764ba2;
+        border-radius: 5px;
+        padding: 1rem;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.75rem;
+        color: #fff;
+        font-size: 1.2rem; /* Increased font size */
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        background: #ffcc00;
+        color: #333;
+    }
+
+    .header-container h1 {
+        margin-right: auto;
+    }
+}
